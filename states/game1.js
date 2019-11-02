@@ -9,14 +9,14 @@ var MAX_DROPS = 15;
 
 Game1.prototype = {
     preload: function() {
-        game.load.image('bl_drop', 'assets/img/drops_blue.png');
-        game.load.image('br_drop', 'assets/img/drops_brown.png');
-        game.load.image('gr_drop', 'assets/img/drops_green.png');
-        game.load.image('bucket', 'assets/img/buckets_empty.png');
+        game.load.image('bl_drop', 'assets/img/trash_blue.jpg');
+        game.load.image('br_drop', 'assets/img/trash_brown.jpg');
+        game.load.image('gr_drop', 'assets/img/trash_green.jpg');
+        game.load.image('bucket', 'assets/img/trashbin.jpg');
 
-        game.load.image('back_1', 'assets/img/backgrounds_boston.png');
-        game.load.image('back_2', 'assets/img/backgrounds_charleston.png');
-        game.load.image('back_3', 'assets/img/backgrounds_sebring.png');
+        game.load.image('back_1', 'assets/img/backgrounds_park.jpg');
+        game.load.image('back_2', 'assets/img/backgrounds_skyline.jpg');
+        game.load.image('back_3', 'assets/img/backgrounds_beach.jpg');
     },
 
     init: function() {
@@ -28,7 +28,7 @@ Game1.prototype = {
         var drop_pos;
         var bucket_velocity;
         var prompt;
-        this.bucket_scale = 0.8;
+        this.bucket_scale = 1.5;
     },
 
     /**

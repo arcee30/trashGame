@@ -3,14 +3,14 @@ var About = function() {};
 About.prototype = {
 
   preload: function() {
-    game.load.image('bl_drop', 'assets/img/drops_blue.png');
-    game.load.image('br_drop', 'assets/img/drops_brown.png');
-    game.load.image('gr_drop', 'assets/img/drops_green.png');
+    game.load.image('bl_drop', 'assets/img/trash_blue.jpg');
+    game.load.image('br_drop', 'assets/img/trash_brown.png');
+    game.load.image('gr_drop', 'assets/img/trash_green.png');
   },
 
   init: function() {
-    this.aboutText = "Drops is a game we created\nto raise awareness about the\ndisparities in access to clean\ndrinking water within\nthe United States.\n\n"
-    this.instructions = "Use your left and right arrow\nkeys to move the bucket\nto catch clean water\ndrops and avoid dirty ones.\nCollect 15 drops to end the level."
+    this.aboutText = "Trash is a game we created\nto raise awareness about the\n.\n\n"
+    this.instructions = "Use your left and right arrow\nkeys to move the bin\nto catch the correct trash (blue0 \n and avoid incorrect (brown) ones.\nCollect 15 correct items to end the level."
   },
 
   create: function () {
@@ -20,7 +20,7 @@ About.prototype = {
     var x = game.world.centerX;
     var y = 600;
 
-    var title = game.add.text(game.world.centerX, 200, 'about drops', {
+    var title = game.add.text(game.world.centerX, 200, 'about Trash Sort', {
       font: '80pt Karla-Bold',
       fill: '#404040',
       align: 'center'

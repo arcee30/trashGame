@@ -3,13 +3,13 @@ var Sources = function() {};
 Sources.prototype = {
 
   preload: function() {
-    game.load.image('bl_drop', 'assets/img/drops_blue.png');
-    game.load.image('br_drop', 'assets/img/drops_brown.png');
-    game.load.image('gr_drop', 'assets/img/drops_green.png');
+    game.load.image('bl_drop', 'assets/img/trash_blue.jpg');
+    game.load.image('br_drop', 'assets/img/trash_brown.jpg');
+    game.load.image('gr_drop', 'assets/img/trash_green.jpg');
   },
 
   init: function() {
-    this.aboutText = "\n \n \n \n \n \n \nThe levels got harder\nnot only because you\nprogressed through\nthe game, but also\nbecause you travelled\n to areas with\nincreasingly polluted\nwater."
+    this.aboutText = "\n \n \n \n \n \n \nThe levels got harder\n because you\nprogressed through\nthe game."
   },
 
   create: function () {

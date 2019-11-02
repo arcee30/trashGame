@@ -11,7 +11,7 @@ Preview1.prototype = {
     });
     this.titleText.anchor.set(0.5);
 
-    var text = "\n\nWelcome to Boston! \nCities like Boston have \naccess to reservoirs \nand high quality \ntreatment plants. \n\nIn the last 5 years, \n98% of water samples \nhad safe levels\nof lead."
+    var text = "\n\nSort the trash! \nfact 1\nfact 2."
     var score_text = game.add.text(game.world.centerX, game.world.centerY, text, {
       font: '48pt Karla',
       fill: '#404040',

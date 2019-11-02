@@ -12,7 +12,7 @@ Menu.prototype = {
   },
 
   init: function() {
-    this.titleText = game.make.text(game.world.centerX, 480, 'drops', {
+    this.titleText = game.make.text(game.world.centerX, 480, 'Trash', {
       font: '160pt Karla-Bold',
       fill: '#404040',
       align: 'center'

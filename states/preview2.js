@@ -11,7 +11,7 @@ Preview2.prototype = {
     });
     this.titleText.anchor.set(0.5);
 
-    var text = "\n\nWelcome to Charleston! \nAreas like this with \nmany industrial plants \nare prone to chemical\n and coal ash leaks. \n\nThese make the \ndrinking water unsafe \nand cause short-term \nhealth problems.";
+    var text = "\n\nSort the recycle! \nfact 1\nfact 2."
     var score_text = game.add.text(game.world.centerX, game.world.centerY, text, {
       font: '48pt Karla',
       fill: '#404040',
