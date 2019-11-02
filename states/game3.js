@@ -8,7 +8,7 @@ var drops_collected = 0;
 Game3.prototype = {
     preload: function() {
          game.load.image('bl_drop', 'assets/img/trash_blue.jpg');
-        game.load.image('br_drop', 'assets/img/trash_brown.jpg');
+        game.load.image('br_drop', 'assets/img/trash_brown.png');
         game.load.image('gr_drop', 'assets/img/trash_green.jpg');
         game.load.image('bucket', 'assets/img/trashbin.jpg');
 
