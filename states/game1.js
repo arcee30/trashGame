@@ -33,7 +33,7 @@ Game1.prototype = {
         var drop_pos;
         var bucket_velocity;
         var prompt;
-        this.bucket_scale = 1.5;
+        this.bucket_scale = 0.8;
     },
 
     /**

@@ -71,7 +71,7 @@ Game3.prototype = {
         if(prompt.exists) {
             prompt.destroy();
         }
-        prompt = game.add.text(75, 175, "recyclable:" + String(blue_collected), {
+        prompt = game.add.text(75, 175, "compost:" + String(blue_collected), {
             font: '72pt Karla-Bold',
             fill: '#404040',
         });
@@ -79,7 +79,7 @@ Game3.prototype = {
         if (prompt2.exists) {
             prompt2.destroy();
         }
-        prompt2 = game.add.text(25, 250, "non-recyclable:" + String(brown_collected), {
+        prompt2 = game.add.text(25, 250, "non-compost:" + String(brown_collected), {
             font: '60pt Karla-Bold',
             fill: '#FF0000',
         });
