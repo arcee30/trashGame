@@ -9,10 +9,15 @@ var MAX_DROPS = 15;
 
 Game1.prototype = {
     preload: function() {
-        game.load.image('bl_drop', 'assets/img/trash_blue.jpg');
-        game.load.image('br_drop', 'assets/img/trash_brown.png');
-        game.load.image('gr_drop', 'assets/img/trash_green.jpg');
-        game.load.image('bucket', 'assets/img/trashbin.jpg');
+        game.load.image('bl_drop', 'assets/img/usednapkins.png');
+        game.load.image('b2_drop', 'assets/img/styrofoam.png');
+        game.load.image('b3_drop', 'assets/img/blueplasticbag.png');
+
+        game.load.image('r_drop', 'assets/img/cokecan.png');
+
+        game.load.image('br_drop', 'assets/img/milkJug.png');
+
+        game.load.image('bucket', 'assets/img/trashbin.png');
 
         game.load.image('back_1', 'assets/img/backgrounds_park.jpg');
         game.load.image('back_2', 'assets/img/backgrounds_skyline.jpg');
@@ -50,23 +55,38 @@ Game1.prototype = {
         drop.alpha = 0;
 
         // collect data to detect level ending
-        if (drop.key.localeCompare('bl_drop') == 0) {
+        if (drop.key.localeCompare('bl_drop') === 0 || drop.key.localeCompare('b2_drop') === 0 || drop.key.localeCompare('b3_drop') === 0) {
         	blue_collected += 1;
-        }
-        else if (drop.key.localeCompare('gr_drop') == 0) {
-        	green_collected += 1;
+
+            console.log("bl" + blue_collected)
+        } else if (drop.key.localeCompare('r_drop') == 0) {
+            //green_collected += 1;
+            brown_collected += 1;
+
+            console.log("r" + brown_collected)
         }
 
         else { // the drop caught is brown
         	brown_collected += 1;
+
+            console.log("br" + brown_collected)
         }
         drops_collected += 1;
+
         if(prompt.exists) {
             prompt.destroy();
         }
-        prompt = game.add.text(75, 175, String(drops_collected), {
-        font: '120pt Karla-Bold',
+        prompt = game.add.text(75, 175, "trash:" + String(blue_collected), {
+            font: '72pt Karla-Bold',
         fill: '#404040',
+        });
+
+        if (prompt2.exists) {
+            prompt2.destroy();
+        }
+        prompt2 = game.add.text(25, 250, "non-trash:" + String(brown_collected), {
+            font: '60pt Karla-Bold',
+            fill: '#FF0000',
         });
     },
 
@@ -85,17 +105,19 @@ Game1.prototype = {
     create: function() {
         game.stage.backgroundColor = '#bce4f8';
         game.add.sprite(0, 0, 'back_1');
-        percent_blue = 80;
-        percent_brown = 10;
-        percent_green = 100 - percent_blue - percent_brown;
+        percent_blue = 20;
+        percent_brown = 20;
+        percent_green = 100 - percent_blue * 3 - percent_brown;
 
         game.physics.startSystem(Phaser.Physics.ARCADE);
         drops = game.add.group();
         drops.enableBody = true;
         drops.physicsBodyType = Phaser.Physics.ARCADE;
         drops.createMultiple(percent_blue/5, 'bl_drop');
+        drops.createMultiple(percent_blue / 5, 'b2_drop');
+        drops.createMultiple(percent_blue / 5, 'b3_drop');
         drops.createMultiple(percent_brown/5, 'br_drop');
-        drops.createMultiple(percent_green/5, 'gr_drop');
+        drops.createMultiple(percent_green / 5, 'r_drop');
 
         //create bucket
         cursors = game.input.keyboard.createCursorKeys();
@@ -114,9 +136,14 @@ Game1.prototype = {
         drop_x = 0;
         bucket_velocity=800;
 
-        prompt = game.add.text(75, 175, String(drops_collected), {
-        font: '120pt Karla-Bold',
+        prompt = game.add.text(75, 175, String(blue_collected), {
+            font: '72pt Karla-Bold',
         fill: '#404040',
+        });
+
+        prompt2 = game.add.text(25, 250, "non-trash:" + String(brown_collected), {
+            font: '60pt Karla-Bold',
+            fill: '#FF0000',
         });
     //test drops method
     //createDrops(400);
@@ -138,7 +165,7 @@ Game1.prototype = {
     },
 
     is_level_over: function() {
-    	return drops_collected >= MAX_DROPS;
+        return blue_collected >= MAX_DROPS;
     },
 
     enable_to_hit_ground: function(drop) {

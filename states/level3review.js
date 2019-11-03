@@ -11,7 +11,7 @@ Level3Review.prototype = {
     });
     this.titleText.anchor.set(0.5);
 
-    this.clean_percentage = Math.round(100 * (blue_collected + green_collected) / (drops_collected));
+    this.clean_percentage = Math.round(100 * (blue_collected) / (drops_collected));
 
     var blue = game.add.image(game.world.centerX, 600, 'bl_drop');
 
@@ -21,7 +21,7 @@ Level3Review.prototype = {
       align: 'center'
     });
 
-    var drops_unit = game.add.text(game.world.centerX, 880, "drops", {
+    var drops_unit = game.add.text(game.world.centerX, 880, "compost", {
       font: '60pt Karla',
       fill: '#404040',
       align: 'center'
@@ -35,8 +35,8 @@ Level3Review.prototype = {
       align: 'center'
     });
 
-    this.clean_percentage = 100 * (blue_collected + green_collected) / (drops_collected);
-    var score_text = game.add.text(game.world.centerX, 1360, "pollution", {
+    this.clean_percentage = 100 * (blue_collected) / (drops_collected);
+    var score_text = game.add.text(game.world.centerX, 1360, "non-compostable", {
       font: '60pt Karla',
       fill: '#404040',
       align: 'center'
@@ -50,7 +50,7 @@ Level3Review.prototype = {
 
     utils.centerGameObjects([percentage, score_text, drops, drops_unit, blue, brown, prompt]);
   },
-  
+
   update: function() {
     if (game.input.keyboard.isDown(Phaser.KeyCode.SPACEBAR)) {
       drops_collected=0;

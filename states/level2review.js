@@ -11,7 +11,7 @@ Level2Review.prototype = {
     });
     this.titleText.anchor.set(0.5);
 
-    this.clean_percentage = Math.round(100 * (blue_collected + green_collected) / (drops_collected));
+    this.clean_percentage = Math.round(100 * (blue_collected) / (drops_collected));
 
     var blue = game.add.image(game.world.centerX, 600, 'bl_drop');
 
@@ -21,7 +21,7 @@ Level2Review.prototype = {
       align: 'center'
     });
 
-    var drops_unit = game.add.text(game.world.centerX, 880, "drops", {
+    var drops_unit = game.add.text(game.world.centerX, 880, "recyclables", {
       font: '60pt Karla',
       fill: '#404040',
       align: 'center'
@@ -35,9 +35,9 @@ Level2Review.prototype = {
       align: 'center'
     });
 
-    this.clean_percentage = 100 * (blue_collected + green_collected) / (drops_collected);
+    this.clean_percentage = 100 * (blue_collected) / (drops_collected);
 
-    var score_text = game.add.text(game.world.centerX, 1360, "pollution", {
+    var score_text = game.add.text(game.world.centerX, 1360, "Non-recyclable items", {
       font: '60pt Karla',
       fill: '#404040',
       align: 'center'

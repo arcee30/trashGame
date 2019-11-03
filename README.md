@@ -1,6 +1,6 @@
-# Drops
-Drops is a game we created to raise awareness about the disparities in access to clean drinking water within the United States. In this game you visit three cities with different water quality issues and management, and try to catch as much clean water as you can in your bucket.
-
+# Trash
+Trash is a game we created to raise awareness about what materials go in what bin, Trash, Recycle, or Compost, a critical way the ordinary person can help the environment."
+ 
 It is written primarily in Javascript using the Phaser.IO game framework.
 
 Play at [www.drops.website](http://www.drops.website)! (desktop only)

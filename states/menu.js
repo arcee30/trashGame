@@ -41,8 +41,10 @@ Menu.prototype = {
     game.add.existing(this.titleText);
 
     var logo = game.add.sprite(game.world.centerX, 1024, 'logo');
+    var logo2 = game.add.sprite(game.world.centerX - 400, 1024, 'logo2');
+    var logo3 = game.add.sprite(game.world.centerX + 400, 1024, 'logo3');
     logo.scale.setTo(2.5, 2.5);
-    utils.centerGameObjects([logo]);
+    utils.centerGameObjects([logo, logo2, logo3]);
 
     this.addMenuOption('press space to play');
 

@@ -3,9 +3,12 @@ var Sources = function() {};
 Sources.prototype = {
 
   preload: function() {
-    game.load.image('bl_drop', 'assets/img/trash_blue.jpg');
-    game.load.image('br_drop', 'assets/img/trash_brown.jpg');
-    game.load.image('gr_drop', 'assets/img/trash_green.jpg');
+    game.load.image('bl_drop', 'assets/img/blueplasticbag.png');
+    game.load.image('br_drop', 'assets/img/cardboardbox.png');
+    game.load.image('gr_drop', 'assets/img/trash_green.png');
+    game.load.image('1_drop', 'assets/img/meat.png');
+    game.load.image('2_drop', 'assets/img/milkjug.png');
+    game.load.image('3_drop', 'assets/img/usednapkins.png');
   },
 
   init: function() {
@@ -38,10 +41,12 @@ Sources.prototype = {
     });
 
 
-
-    var drop1 = game.add.image(x-200, y+360+300+300, 'bl_drop');
-    var drop2 = game.add.image(x, y+360+300+300, 'gr_drop');
-    var drop3 = game.add.image(x+200, y+360+300+300, 'br_drop');
+    var drop1 = game.add.image(120, y + 360 + 300 + 300, 'bl_drop');
+    var drop2 = game.add.image(248, y + 360 + 300 + 300, 'gr_drop');
+    var drop3 = game.add.image(376, y + 360 + 300 + 300, 'br_drop');
+    var drop4 = game.add.image(575, y + 360 + 300 + 300, '1_drop');
+    var drop5 = game.add.image(760, y + 360 + 300 + 300, '2_drop');
+    var drop6 = game.add.image(888, y + 360 + 300 + 300, '3_drop');
 
     var prompt = game.add.text(x, 1920-150, 'press space to play again', {
       font: '48pt Karla-Bold',
@@ -49,7 +54,7 @@ Sources.prototype = {
       align: 'center'
     });
 
-    utils.centerGameObjects([title, subtitle, txt, prompt, drop1, drop2, drop3]);
+    utils.centerGameObjects([title, subtitle, txt, prompt, drop1, drop2, drop3, drop4, drop5, drop6]);
   },
 
   update: function() {

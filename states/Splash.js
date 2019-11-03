@@ -25,6 +25,7 @@ Splash.prototype = {
   loadImages: function() {
     game.load.image('menu-bg', 'assets/img/blue.png');
     //load other images, like options or game over
+    game.load.image('bucket', 'assets/img/trashbin.png');
   },
 
   loadFonts: function() {
