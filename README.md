@@ -1,5 +1,8 @@
 # Welcome to the Trash Sort!
+Play at https://arcee30.github.io/trashGame/
 Trash is a game we created to raise awareness about what materials go in what bin, Trash, Recycle, or Compost, a critical way the ordinary person can help the environment."
+
+
 ### These are some facts that will put your trash into perspective
 
 The average person generates over 4 pounds of trash a day
