@@ -3,13 +3,17 @@ Trash is a game we created to raise awareness about what materials go in what bi
  
 It is written primarily in Javascript using the Phaser.IO game framework.
 
-Play at [www.drops.website](http://www.drops.website)! (desktop only)
-
-Drops won 1st Place and Best User Experience at [ByteHacks 2017](https://bytehacks.org/).
-
 # To run locally
-- Install Python
-- Clone this repo: `git clone https://github.com/liliapoteat/drops.git`
+- Clone this repo: `git clone https://github.com/arcee30/trashgame.git`
 - `cd` into repo
+
+Option 1:
+The games needs a server to run. 
+- Open the code as a project in your favorite ide like webstorm or brackets 
+- Run index.html
+
+Option 2: 
+
+- Install Python
 - Run `python -m SimpleHTTPServer` (Python 2.7) or `python -m http.server` (Python 3)
 - Head to `localhost:8000`
