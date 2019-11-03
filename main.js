@@ -6,9 +6,9 @@ Main.prototype = {
   preload: function () {
     game.load.image('bg', 'assets/img/blue.png');
     game.load.image('loading', 'assets/img/loading.png');
-    game.load.image('logo', 'assets/img/trashbin.png');
-    game.load.image('logo2', 'assets/img/recyclebin.png');
-    game.load.image('logo3', 'assets/img/compostbin.png');
+    game.load.image('logo', 'assets/img/trashbinlogo.png');
+    game.load.image('logo2', 'assets/img/recyclebinlogo.png');
+    game.load.image('logo3', 'assets/img/compostbinlogo.png');
     game.load.script('utils', 'lib/utils.js');
     game.load.script('splash', 'states/Splash.js');
   },

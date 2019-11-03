@@ -12,7 +12,7 @@ Menu.prototype = {
   },
 
   init: function() {
-    this.titleText = game.make.text(game.world.centerX, 480, 'Trash', {
+    this.titleText = game.make.text(game.world.centerX, 480, 'Trash Sort', {
       font: '160pt Karla-Bold',
       fill: '#404040',
       align: 'center'
@@ -44,6 +44,9 @@ Menu.prototype = {
     var logo2 = game.add.sprite(game.world.centerX - 400, 1024, 'logo2');
     var logo3 = game.add.sprite(game.world.centerX + 400, 1024, 'logo3');
     logo.scale.setTo(2.5, 2.5);
+    logo2.scale.setTo(2.5, 2.5);
+    3.
+    scale.setTo(2.5, 2.5);
     utils.centerGameObjects([logo, logo2, logo3]);
 
     this.addMenuOption('press space to play');
