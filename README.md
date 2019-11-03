@@ -1,7 +1,12 @@
 # Welcome to the Trash Sort!
-Play at https://arcee30.github.io/trashGame/
-Trash is a game we created to raise awareness about what materials go in what bin, Trash, Recycle, or Compost, a critical way the ordinary person can help the environment."
 
+
+
+Living in Princeton, people care a lot about the environemnt.  Despite that, I see people in the cafateria and other places constantly putting materials in the wrong bin, causing many recyclable and compostahle items to end up in the landfill. It's not that they didn't care, though, it was because they didn't know. 
+
+Trash Sort is a game we created to raise awareness about what materials go in what bin, Trash, Recycle, or Compost, a critical way the ordinary person can help the environment.
+
+Play at https://arcee30.github.io/trashGame/
 
 ### These are some facts that will put your trash into perspective
 
